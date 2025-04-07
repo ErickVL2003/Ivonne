@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños, Madrina Querida! 🌸</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        :root {
+            --color-petalo: #b32542;    /* Rosa intenso */
+            --color-fondo: #fff5e6;     /* Crema cálida */
+            --color-accento: #cc7083;   /* Rosa terroso */
+            --color-texto: #5a3a2b;     /* Marrón oscuro */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        body {
+            background: linear-gradient(45deg, var(--color-fondo), #ffe9d6);
+            color: var(--color-texto);
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .petals {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .petal {
+            position: absolute;
+            background: var(--color-petalo);
+            width: 15px;
+            height: 15px;
+            border-radius: 50% 30% 50% 30%;
+            opacity: 0.9;
+            animation: fall 8s linear infinite;
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            box-shadow: 0 0 10px rgba(179, 37, 66, 0.3);
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100vh) rotate(0deg) scale(1); opacity: 0.8; }
+            100% { transform: translateY(100vh) rotate(360deg) scale(0.6); opacity: 0.3; }
+        }
+
+        .header {
+            text-align: center;
+            padding: 8vh 20px 4vh;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 5vh;
+            color: var(--color-accento);
+            text-shadow: 2px 2px 4px rgba(204, 112, 131, 0.2);
+            margin-bottom: 2vh;
+        }
+
+        .photo-gallery {
+            height: 55vh;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            padding-bottom: 30px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 30vw;
+            height: 40vh;
+            border-radius: 15px;
+            border: 2px solid var(--color-accento);
+            box-shadow: 0 0 20px rgba(204, 112, 131, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--color-accento) !important;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--color-accento) !important;
+        }
+
+        .love-letter {
+            width: 85%;
+            max-width: 800px;
+            padding: 4vh;
+            margin: 5vh auto 15vh;
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(204, 112, 131, 0.1);
+            z-index: 3;
+            position: relative;
+        }
+
+        .letter-text {
+            font-size: 2.3vh;
+            line-height: 1.7;
+            text-align: justify;
+            color: var(--color-texto);
+        }
+
+        .heart {
+            position: fixed;
+            bottom: 3vh;
+            right: 3vw;
+            font-size: 4vh;
+            color: var(--color-accento);
+            animation: pulse 1.5s infinite;
+            cursor: pointer;
+            z-index: 4;
+            text-shadow: 0 0 10px rgba(204, 112, 131, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                overflow-y: auto;
+            }
+
+            .header {
+                padding: 12vh 20px 4vh;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .swiper-slide {
+                width: 80vw;
+                height: 50vh;
+            }
+
+            .love-letter {
+                width: 90%;
+                margin: 8vh auto;
+                padding: 3vh;
+            }
+
+            .letter-text {
+                font-size: 1.2rem;
+                text-align: left;
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="petals"></div>
+
+    <div class="header">
+        <h1>¡Feliz Cumpleaños, Tía de Mi Vida! 🌸</h1>
+        <p style="font-size: 3vh; color: var(--color-accento); margin-top: 2vh;">Cada pétalo guarda un recuerdo especial contigo</p>
+    </div>
+
+    <div class="photo-gallery">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url('./images/Foto1.jpg')"></div>
+                <div class="swiper-slide" style="background-image: url('./images/Foto2.jpg')"></div>
+                <div class="swiper-slide" style="background-image: url('./images/Foto3.jpg')"></div>
+                <div class="swiper-slide" style="background-image: url('./images/Foto4.jpg')"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <div class="love-letter">
+        <p class="letter-text">
+            Mi Querida Madrina,<br><br>
+            
+            Hoy celebramos no solo tu cumpleaños, sino el día en que el mundo recibió a su ángel más tierno.<br><br>
+            
+            Cada arruga cuenta historias de sabiduría, cada cana brilla como hilo de plata tejido por el tiempo, y tu sonrisa sigue siendo ese faro que ilumina hasta el día más gris.<br><br>
+            
+            Que este nuevo año te traiga salud para seguir conquistando sueños, fuerza para ser esa mujer extraordinaria que eres, y mil motivos para reír con ese corazón que es hogar para todos los que te conocemos.<br><br>
+            
+            Hoy levanto mi copa por ti: ¡Que la vida te devuelva en bendiciones todo el amor que has sembrado!<br><br>
+            
+            Con todo mi corazón,<br>
+            Erick Valenzuela<br><br>
+            
+            <em style="display: block; text-align: center; font-style: italic; margin-top: 2vh;">
+                "Fuerza y honor son su vestidura; se ríe de lo por venir. Abre su boca con sabiduría, y la ley de clemencia está en su lengua" - Proverbios 31:25-26
+            </em>
+        </p>
+    </div>
+
+    <div class="heart">❤️</div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Configuración Swiper mejorada
+        new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            speed: 800,
+            loop: true,
+            autoplay: {
+                delay: 5000,  // 5 segundos por foto
+                disableOnInteraction: false,
+            },
+            coverflowEffect: {
+                rotate: 8,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Generador de pétalos optimizado
+        function createPetals() {
+            const container = document.querySelector('.petals');
+            for(let i = 0; i < 60; i++) {
+                const petal = document.createElement('div');
+                petal.className = 'petal';
+                petal.style.cssText = `
+                    left: ${Math.random() * 100}%;
+                    animation-duration: ${Math.random() * 7 + 5}s;
+                    animation-delay: ${Math.random() * 5}s;
+                    width: ${Math.random() * 12 + 8}px;
+                    height: ${Math.random() * 12 + 8}px;
+                    opacity: ${Math.random() * 0.5 + 0.5};
+                `;
+                container.appendChild(petal);
+            }
+        }
+        createPetals();
+
+        // Interacción del corazón mejorada
+        const heart = document.querySelector('.heart');
+        const messages = [
+            "Eres única 💖", 
+            "Gracias por todo 🙏",
+            "Te admiro 🌟",
+            "Mi ángel guardián 😇"
+        ];
+
+        heart.addEventListener('click', () => {
+            const heartRect = heart.getBoundingClientRect();
+            
+            const bubble = document.createElement('div');
+            bubble.textContent = messages[Math.floor(Math.random() * messages.length)];
+            bubble.style.cssText = `
+                position: fixed;
+                background: rgba(255, 255, 255, 0.95);
+                color: var(--color-accento);
+                padding: 8px 20px;
+                border-radius: 25px;
+                left: ${heartRect.left - 110}px;
+                top: ${heartRect.top - 60}px;
+                animation: float 2s ease-out;
+                box-shadow: 0 3px 15px rgba(179, 37, 66, 0.2);
+                z-index: 5;
+                font-size: 1.3em;
+                opacity: 0;
+                transform: translateY(20px);
+                border: 1px solid var(--color-accento);
+            `;
+            
+            document.body.appendChild(bubble);
+            
+            setTimeout(() => {
+                bubble.style.opacity = '1';
+                bubble.style.transform = 'translateY(0)';
+            }, 10);
+            
+            setTimeout(() => bubble.remove(), 2000);
+        });
+
+        // Animación flotante
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0% { transform: translateY(0); opacity: 1; }
+                100% { transform: translateY(-100px); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
