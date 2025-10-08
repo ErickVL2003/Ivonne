@@ -3,318 +3,1357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Feliz Cumpleaños, Madrina Querida! 🌸</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Evelyn López | Renova Vida - Bienestar, propósito y transformación</title>
+    <meta name="description" content="Evelyn López ofrece bienestar integral, productos Omnilife, talleres de crecimiento personal y prendas personalizadas con propósito.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-petalo: #b32542;    /* Rosa intenso */
-            --color-fondo: #fff5e6;     /* Crema cálida */
-            --color-accento: #cc7083;   /* Rosa terroso */
-            --color-texto: #5a3a2b;     /* Marrón oscuro */
+            --lila-pastel: #743f8d;
+            --lila-medio: #7A1FA2;
+            --lila-claro: #f5f0fa;
+            --verde-menta: #61e9a7;
+            --verde-oscuro: #44b340;
+            --verde-claro: #e8f7ef;
+            --blanco: #ffffff;
+            --gris-claro: #f9f9f9;
+            --gris-medio: #eaeaea;
+            --texto-oscuro: #2d3748;
+            --texto-medio: #4a5568;
+            --texto-claro: #718096;
+            --sombra: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --sombra-intensa: 0 20px 40px rgba(0, 0, 0, 0.12);
+            --transicion: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Dancing Script', cursive;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background: linear-gradient(45deg, var(--color-fondo), #ffe9d6);
-            color: var(--color-texto);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.7;
+            color: var(--texto-oscuro);
+            background-color: var(--blanco);
             overflow-x: hidden;
-            min-height: 100vh;
-            position: relative;
         }
 
-        .petals {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .petal {
-            position: absolute;
-            background: var(--color-petalo);
-            width: 15px;
-            height: 15px;
-            border-radius: 50% 30% 50% 30%;
-            opacity: 0.9;
-            animation: fall 8s linear infinite;
-            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-            box-shadow: 0 0 10px rgba(179, 37, 66, 0.3);
-        }
-
-        @keyframes fall {
-            0% { transform: translateY(-100vh) rotate(0deg) scale(1); opacity: 0.8; }
-            100% { transform: translateY(100vh) rotate(360deg) scale(0.6); opacity: 0.3; }
-        }
-
-        .header {
-            text-align: center;
-            padding: 8vh 20px 4vh;
-            position: relative;
-            z-index: 2;
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1.2rem;
         }
 
         h1 {
-            font-size: 5vh;
-            color: var(--color-accento);
-            text-shadow: 2px 2px 4px rgba(204, 112, 131, 0.2);
-            margin-bottom: 2vh;
+            font-size: 3.5rem;
         }
 
-        .photo-gallery {
-            height: 55vh;
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--texto-medio);
+        }
+
+        .container {
+            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 15px;
+        }
+
+        /* Header Mejorado */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            transition: var(--transicion);
+        }
+
+        header.scrolled {
+            padding: 0.8rem 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--lila-pastel) 0%, var(--verde-oscuro) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-weight: bold;
+            color: var(--blanco);
+            font-size: 1.3rem;
+            box-shadow: var(--sombra);
+        }
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--texto-oscuro);
+        }
+
+        .logo-text span {
+            background: linear-gradient(135deg, var(--lila-pastel) 0%, var(--verde-oscuro) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
             position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--texto-oscuro);
+            font-weight: 500;
+            transition: var(--transicion);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        nav ul li a:hover {
+            color: var(--lila-pastel);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(90deg, var(--lila-pastel) 0%, var(--verde-oscuro) 100%);
+            transition: width 0.4s ease;
+            border-radius: 2px;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--texto-oscuro);
+            transition: var(--transicion);
+        }
+
+        .mobile-menu:hover {
+            color: var(--lila-pastel);
+        }
+
+        /* Hero Section Mejorada */
+        .hero {
+            padding: 200px 0 120px;
+            background: linear-gradient(135deg, rgba(116, 63, 141, 0.9) 0%, rgba(97, 233, 167, 0.85) 100%), 
+                        url('https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            text-align: center;
+            color: var(--blanco);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-buttons {
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--verde-oscuro) 0%, var(--verde-menta) 100%);
+            color: var(--blanco);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transicion);
+            cursor: pointer;
+            margin: 0 12px 12px;
+            box-shadow: var(--sombra);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.7s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--sombra-intensa);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--blanco);
+            color: var(--blanco);
+        }
+
+        .btn-outline:hover {
+            background: var(--blanco);
+            color: var(--texto-oscuro);
+        }
+
+        .btn i {
+            margin-left: 8px;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Sections Mejoradas */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--lila-pastel) 0%, var(--verde-oscuro) 100%);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-bg {
+            background-color: var(--gris-claro);
+        }
+
+        .section-bg-alt {
+            background: linear-gradient(135deg, var(--lila-claro) 0%, var(--verde-claro) 100%);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--sombra-intensa);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transicion);
+        }
+
+        .about-image:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transicion);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Services Grid Mejorada */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background-color: var(--blanco);
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: var(--sombra);
+            transition: var(--transicion);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--lila-pastel) 0%, var(--verde-oscuro) 100%);
             z-index: 2;
         }
 
-        .swiper-container {
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 0;
+            background: linear-gradient(135deg, var(--lila-claro) 0%, var(--verde-claro) 100%);
+            transition: var(--transicion);
+            z-index: -1;
+        }
+
+        .service-card:hover::after {
             height: 100%;
-            padding-bottom: 30px;
         }
 
-        .swiper-slide {
-            background-position: center;
-            background-size: cover;
-            width: 30vw;
-            height: 40vh;
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--sombra-intensa);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--lila-pastel) 0%, var(--verde-oscuro) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .service-card h3 {
+            color: var(--texto-oscuro);
+            margin-bottom: 1.2rem;
+        }
+
+        /* Products Mejorado */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .product-card {
+            background-color: var(--blanco);
             border-radius: 15px;
-            border: 2px solid var(--color-accento);
-            box-shadow: 0 0 20px rgba(204, 112, 131, 0.15);
-            transition: transform 0.3s ease;
-        }
-
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: var(--color-accento) !important;
-        }
-
-        .swiper-pagination-bullet {
-            background: var(--color-accento) !important;
-        }
-
-        .love-letter {
-            width: 85%;
-            max-width: 800px;
-            padding: 4vh;
-            margin: 5vh auto 15vh;
-            background: rgba(255, 255, 255, 0.97);
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(204, 112, 131, 0.1);
-            z-index: 3;
+            overflow: hidden;
+            box-shadow: var(--sombra);
+            transition: var(--transicion);
             position: relative;
         }
 
-        .letter-text {
-            font-size: 2.3vh;
-            line-height: 1.7;
-            text-align: justify;
-            color: var(--color-texto);
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--sombra-intensa);
         }
 
-        .heart {
+        .product-image {
+            height: 220px;
+            background: linear-gradient(135deg, var(--lila-pastel) 0%, var(--verde-oscuro) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            color: var(--blanco);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-info h3 {
+            color: var(--texto-oscuro);
+            margin-bottom: 0.8rem;
+        }
+
+        /* Contact Mejorado */
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--blanco);
+            border-radius: 10px;
+            box-shadow: var(--sombra);
+            transition: var(--transicion);
+        }
+
+        .contact-item:hover {
+            transform: translateX(10px);
+            box-shadow: var(--sombra-intensa);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--lila-pastel) 0%, var(--verde-oscuro) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: var(--blanco);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            margin-bottom: 5px;
+            color: var(--texto-oscuro);
+        }
+
+        .contact-details p {
+            margin-bottom: 0;
+            color: var(--texto-medio);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--texto-oscuro);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--gris-medio);
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            transition: var(--transicion);
+            background: var(--blanco);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--lila-pastel);
+            box-shadow: 0 0 0 3px rgba(116, 63, 141, 0.1);
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer Mejorado */
+        footer {
+            background: linear-gradient(135deg, var(--texto-oscuro) 0%, #1a202c 100%);
+            color: var(--blanco);
+            padding: 80px 0 30px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--lila-pastel) 0%, var(--verde-oscuro) 100%);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-about {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo span {
+            background: linear-gradient(135deg, var(--verde-menta) 0%, var(--verde-oscuro) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 25px;
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: auto;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 12px;
+            color: var(--blanco);
+            text-decoration: none;
+            transition: var(--transicion);
+        }
+
+        .social-links a:hover {
+            background: var(--verde-oscuro);
+            transform: translateY(-5px);
+        }
+
+        .footer-links h3 {
+            color: var(--verde-menta);
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--verde-menta);
+            border-radius: 2px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transicion);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links ul li a i {
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--verde-menta);
+            transform: translateX(5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* WhatsApp Float Mejorado */
+        .whatsapp-float {
             position: fixed;
-            bottom: 3vh;
-            right: 3vw;
-            font-size: 4vh;
-            color: var(--color-accento);
-            animation: pulse 1.5s infinite;
-            cursor: pointer;
-            z-index: 4;
-            text-shadow: 0 0 10px rgba(204, 112, 131, 0.3);
+            bottom: 25px;
+            right: 25px;
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blanco);
+            font-size: 2rem;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: var(--transicion);
+            text-decoration: none;
+            animation: pulse 2s infinite;
         }
 
-        @media (max-width: 768px) {
-            body {
-                overflow-y: auto;
-            }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+            animation: none;
+        }
 
-            .header {
-                padding: 12vh 20px 4vh;
-            }
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 100px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--lila-pastel) 0%, var(--verde-oscuro) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blanco);
+            font-size: 1.2rem;
+            box-shadow: var(--sombra);
+            z-index: 999;
+            transition: var(--transicion);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+        }
 
-            h1 {
-                font-size: 2.5rem;
-            }
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
 
-            .swiper-slide {
-                width: 80vw;
-                height: 50vh;
-            }
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--sombra-intensa);
+        }
 
-            .love-letter {
-                width: 90%;
-                margin: 8vh auto;
-                padding: 3vh;
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
-
-            .letter-text {
-                font-size: 1.2rem;
-                text-align: left;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.15); }
-            100% { transform: scale(1); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--blanco);
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive Mejorado */
+        @media (max-width: 1100px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .about-content,
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                margin-top: 40px;
+                transform: none;
+            }
+            
+            .about-image:hover {
+                transform: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .logo {
+                margin-bottom: 0;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--blanco);
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+                transition: right 0.4s ease;
+                z-index: 1001;
+                padding: 80px 30px 30px;
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul li {
+                margin: 0 0 20px;
+                width: 100%;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 10px 0;
+                font-size: 1.1rem;
+            }
+
+            .mobile-menu {
+                display: block;
+                position: relative;
+                z-index: 1002;
+            }
+
+            .mobile-menu.active i::before {
+                content: '\f00d';
+            }
+
+            .hero {
+                padding: 160px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .services-grid,
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .whatsapp-float {
+                width: 60px;
+                height: 60px;
+                font-size: 1.7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+            
+            .section-title {
+                margin-bottom: 3rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="petals"></div>
-
-    <div class="header">
-        <h1>¡Feliz Cumpleaños, Tía de Mi Vida! 🌸</h1>
-        <p style="font-size: 3vh; color: var(--color-accento); margin-top: 2vh;">Cada pétalo guarda un recuerdo especial contigo</p>
-    </div>
-
-    <div class="photo-gallery">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('./images/Foto1.jpg')"></div>
-                <div class="swiper-slide" style="background-image: url('./images/Foto2.jpg')"></div>
-                <div class="swiper-slide" style="background-image: url('./images/Foto3.jpg')"></div>
-                <div class="swiper-slide" style="background-image: url('./images/Foto4.jpg')"></div>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">EL</div>
+                <div class="logo-text">Evelyn <span>López</span></div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#renova-vida">Renova Vida</a></li>
+                    <li><a href="#maketi">Maketi</a></li>
+                    <li><a href="#gaimus">GAIMUS</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>Evelyn López | Renova Vida</h1>
+            <p>Bienestar, propósito y transformación para tu vida</p>
+            <p>Inspirando bienestar, propósito y transformación para mujeres que buscan sanar, crecer y emprender.</p>
+            <div class="hero-buttons">
+                <a href="#renova-vida" class="btn">Ver Productos <i class="fas fa-arrow-right"></i></a>
+                <a href="#contacto" class="btn btn-outline">Contactar <i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Hola, soy Evelyn López</h3>
+                    <p>Fundadora de GAIMUS, creadora de Maketi y asesora de bienestar con Renova Vida. Mi propósito es acompañarte a recuperar tu bienestar integral — físico, emocional y espiritual — mientras te inspiro a creer en el poder de comenzar de nuevo.</p>
+                    <p>En este espacio encontrarás productos, recursos y palabras que fortalecen tu fe, tu salud y tus sueños.</p>
+                    <p>Mi misión es ayudar a mujeres a sanar, crecer y emprender con propósito, ofreciendo herramientas para una vida plena y significativa.</p>
+                    <div class="about-buttons">
+                        <a href="#contacto" class="btn">Conoce Mis Talleres <i class="fas fa-users"></i></a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <!-- En un caso real, aquí iría una foto de Evelyn -->
+                    <div style="width:100%;height:400px;background:linear-gradient(135deg, var(--lila-pastel) 0%, var(--verde-oscuro) 100%);display:flex;align-items:center;justify-content:center;color:var(--blanco);font-size:1.2rem;flex-direction:column;">
+                        <i class="fas fa-user" style="font-size:4rem;margin-bottom:1rem;"></i>
+                        Evelyn López
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Renova Vida -->
+    <section id="renova-vida" class="section-bg">
+        <div class="container">
+            <h2 class="section-title">Renova Vida - Bienestar Integral</h2>
+            <p style="text-align:center; margin-bottom:50px; max-width:800px; margin-left:auto; margin-right:auto;">Nutre tu cuerpo, renueva tu energía. A través de Renova Vida, promuevo el bienestar integral con productos naturales Omnilife, diseñados para cuidar tu salud, aumentar tu energía y ayudarte a sentirte bien contigo misma.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Productos Omnilife</h3>
+                    <p>Suplementos nutricionales de alta calidad para mejorar tu salud, energía y bienestar general.</p>
+                    <a href="#contacto" class="btn">Ver Catálogo <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Talleres de Bienestar</h3>
+                    <p>Sesiones grupales e individuales para fortalecer tu bienestar emocional y crecimiento personal.</p>
+                    <a href="#contacto" class="btn">Unirme a un Taller <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Asesoría Personalizada</h3>
+                    <p>Acompañamiento individual para diseñar un plan de bienestar adaptado a tus necesidades específicas.</p>
+                    <a href="#contacto" class="btn">Solicitar Asesoría <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maketi -->
+    <section id="maketi" class="section-bg-alt">
+        <div class="container">
+            <h2 class="section-title">Maketi - Creaciones Personalizadas</h2>
+            <p style="text-align:center; margin-bottom:50px; max-width:800px; margin-left:auto; margin-right:auto;">Diseños con propósito, hechos para inspirar. En Maketi elaboramos camisetas, delantales y dotaciones personalizadas al por mayor y al detal. Cada prenda es una oportunidad para expresar quién eres, tu emprendimiento o tu mensaje con propósito.</p>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Camisetas Personalizadas</h3>
+                        <p>Camisetas de alta calidad con diseños únicos que transmiten tu mensaje.</p>
+                        <a href="#contacto" class="btn">Cotizar Diseño <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Delantales</h3>
+                        <p>Delantales resistentes y personalizados para tu negocio o uso personal.</p>
+                        <a href="#contacto" class="btn">Cotizar Diseño <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Dotaciones Empresariales</h3>
+                        <p>Uniformes corporativos que reflejan la identidad de tu empresa.</p>
+                        <a href="#contacto" class="btn">Cotizar Diseño <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GAIMUS -->
+    <section id="gaimus">
+        <div class="container">
+            <h2 class="section-title">GAIMUS - Propósito Social</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Acompañamos a mujeres a sanar, creer y reconstruirse</h3>
+                    <p>La Fundación Grupo de Apoyo Integral Mujeres Sobrevivientes (GAIMUS) nació con el deseo de brindar apoyo emocional y espiritual a mujeres que atraviesan procesos difíciles.</p>
+                    <p>Aunque actualmente estamos en pausa, seguimos creyendo que ninguna mujer está sola: todas podemos levantarnos y florecer.</p>
+                    <p>Nuestra misión es crear un espacio seguro donde las mujeres puedan encontrar apoyo, recursos y comunidad para reconstruir sus vidas con esperanza y propósito.</p>
+                    <div class="about-buttons">
+                        <a href="#contacto" class="btn">Conoce Nuestra Historia <i class="fas fa-book-open"></i></a>
+                        <a href="#contacto" class="btn btn-outline">Quiero Participar <i class="fas fa-hands-helping"></i></a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <!-- En un caso real, aquí iría una imagen relacionada con GAIMUS -->
+                    <div style="width:100%;height:400px;background:linear-gradient(135deg, var(--lila-pastel) 0%, var(--verde-oscuro) 100%);display:flex;align-items:center;justify-content:center;color:var(--blanco);font-size:1.2rem;flex-direction:column;">
+                        <i class="fas fa-hands-helping" style="font-size:4rem;margin-bottom:1rem;"></i>
+                        Fundación GAIMUS
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section-bg">
+        <div class="container">
+            <h2 class="section-title">Conectemos</h2>
+            <p style="text-align:center; margin-bottom:50px; max-width:800px; margin-left:auto; margin-right:auto;">¿Quieres más información sobre productos, talleres o pedidos personalizados? Escríbeme, será un gusto atenderte personalmente.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Teléfono / WhatsApp</h3>
+                            <p>+1 (123) 456-7890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>contacto@evelynlopez.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Ubicación</h3>
+                            <p>Ciudad, País</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" id="submitBtn">
+                            <span class="btn-text">Enviar Mensaje</span>
+                            <span class="loading-spinner" style="display:none;"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Evelyn <span>López</span></div>
+                    <p>Inspirando bienestar, propósito y transformación para mujeres que buscan sanar, crecer y emprender.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="#sobre-mi"><i class="fas fa-chevron-right"></i> Sobre Mí</a></li>
+                        <li><a href="#renova-vida"><i class="fas fa-chevron-right"></i> Renova Vida</a></li>
+                        <li><a href="#maketi"><i class="fas fa-chevron-right"></i> Maketi</a></li>
+                        <li><a href="#gaimus"><i class="fas fa-chevron-right"></i> GAIMUS</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#renova-vida"><i class="fas fa-chevron-right"></i> Productos Omnilife</a></li>
+                        <li><a href="#renova-vida"><i class="fas fa-chevron-right"></i> Talleres de Bienestar</a></li>
+                        <li><a href="#renova-vida"><i class="fas fa-chevron-right"></i> Asesoría Personalizada</a></li>
+                        <li><a href="#maketi"><i class="fas fa-chevron-right"></i> Prendas Personalizadas</a></li>
+                        <li><a href="#gaimus"><i class="fas fa-chevron-right"></i> Apoyo a Mujeres</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="tel:+11234567890"><i class="fas fa-phone"></i> +1 (123) 456-7890</a></li>
+                        <li><a href="mailto:contacto@evelynlopez.com"><i class="fas fa-envelope"></i> contacto@evelynlopez.com</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Ciudad, País</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Evelyn López | Renova Vida. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
     </div>
 
-    <div class="love-letter">
-        <p class="letter-text">
-            Mi Querida Madrina,<br><br>
-            
-            Hoy celebramos no solo tu cumpleaños, sino el día en que el mundo recibió a su ángel más tierno.<br><br>
-            
-            Cada arruga cuenta historias de sabiduría, cada cana brilla como hilo de plata tejido por el tiempo, y tu sonrisa sigue siendo ese faro que ilumina hasta el día más gris.<br><br>
-            
-            Que este nuevo año te traiga salud para seguir conquistando sueños, fuerza para ser esa mujer extraordinaria que eres, y mil motivos para reír con ese corazón que es hogar para todos los que te conocemos.<br><br>
-            
-            Hoy levanto mi copa por ti: ¡Que la vida te devuelva en bendiciones todo el amor que has sembrado!<br><br>
-            
-            Con todo mi corazón,<br>
-            Erick Valenzuela<br><br>
-            
-            <em style="display: block; text-align: center; font-style: italic; margin-top: 2vh;">
-                "Fuerza y honor son su vestidura; se ríe de lo por venir. Abre su boca con sabiduría, y la ley de clemencia está en su lengua" - Proverbios 31:25-26
-            </em>
-        </p>
-    </div>
-
-    <div class="heart">❤️</div>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        // Configuración Swiper mejorada
-        new Swiper('.swiper-container', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            speed: 800,
-            loop: true,
-            autoplay: {
-                delay: 5000,  // 5 segundos por foto
-                disableOnInteraction: false,
-            },
-            coverflowEffect: {
-                rotate: 8,
-                stretch: 0,
-                depth: 100,
-                modifier: 2,
-                slideShadows: true,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    // Cerrar menú móvil si está abierto
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
 
-        // Generador de pétalos optimizado
-        function createPetals() {
-            const container = document.querySelector('.petals');
-            for(let i = 0; i < 60; i++) {
-                const petal = document.createElement('div');
-                petal.className = 'petal';
-                petal.style.cssText = `
-                    left: ${Math.random() * 100}%;
-                    animation-duration: ${Math.random() * 7 + 5}s;
-                    animation-delay: ${Math.random() * 5}s;
-                    width: ${Math.random() * 12 + 8}px;
-                    height: ${Math.random() * 12 + 8}px;
-                    opacity: ${Math.random() * 0.5 + 0.5};
-                `;
-                container.appendChild(petal);
-            }
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const nav = document.querySelector('nav');
+        
+        mobileMenu.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace (para móviles)
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (nav.classList.contains('active')) {
+                    nav.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Form submission con feedback visual
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const spinner = submitBtn.querySelector('.loading-spinner');
+        
+        if(contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Mostrar spinner y cambiar texto
+                btnText.textContent = 'Enviando...';
+                spinner.style.display = 'inline-block';
+                submitBtn.disabled = true;
+                
+                // Simular envío (en un caso real, aquí iría la llamada AJAX)
+                setTimeout(() => {
+                    // Restaurar botón
+                    btnText.textContent = 'Mensaje Enviado!';
+                    spinner.style.display = 'none';
+                    
+                    // Mostrar mensaje de éxito
+                    alert('¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.');
+                    
+                    // Resetear formulario después de un momento
+                    setTimeout(() => {
+                        this.reset();
+                        btnText.textContent = 'Enviar Mensaje';
+                        submitBtn.disabled = false;
+                    }, 2000);
+                }, 1500);
+            });
         }
-        createPetals();
 
-        // Interacción del corazón mejorada
-        const heart = document.querySelector('.heart');
-        const messages = [
-            "Eres única 💖", 
-            "Gracias por todo 🙏",
-            "Te admiro 🌟",
-            "Mi ángel guardián 😇"
-        ];
-
-        heart.addEventListener('click', () => {
-            const heartRect = heart.getBoundingClientRect();
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            const scrollTop = document.getElementById('scrollTop');
             
-            const bubble = document.createElement('div');
-            bubble.textContent = messages[Math.floor(Math.random() * messages.length)];
-            bubble.style.cssText = `
-                position: fixed;
-                background: rgba(255, 255, 255, 0.95);
-                color: var(--color-accento);
-                padding: 8px 20px;
-                border-radius: 25px;
-                left: ${heartRect.left - 110}px;
-                top: ${heartRect.top - 60}px;
-                animation: float 2s ease-out;
-                box-shadow: 0 3px 15px rgba(179, 37, 66, 0.2);
-                z-index: 5;
-                font-size: 1.3em;
-                opacity: 0;
-                transform: translateY(20px);
-                border: 1px solid var(--color-accento);
-            `;
+            if(window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
             
-            document.body.appendChild(bubble);
-            
-            setTimeout(() => {
-                bubble.style.opacity = '1';
-                bubble.style.transform = 'translateY(0)';
-            }, 10);
-            
-            setTimeout(() => bubble.remove(), 2000);
+            // Mostrar/ocultar botón de scroll to top
+            if (window.scrollY > 500) {
+                scrollTop.classList.add('active');
+            } else {
+                scrollTop.classList.remove('active');
+            }
         });
 
-        // Animación flotante
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes float {
-                0% { transform: translateY(0); opacity: 1; }
-                100% { transform: translateY(-100px); opacity: 0; }
-            }
-        `;
-        document.head.appendChild(style);
+        // Scroll to top
+        document.getElementById('scrollTop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Animación de elementos al hacer scroll
+        const fadeElements = document.querySelectorAll('.service-card, .product-card, .about-content, .contact-item');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+        
+        // Ejecutar al cargar y al hacer scroll
+        window.addEventListener('load', fadeInOnScroll);
+        window.addEventListener('scroll', fadeInOnScroll);
+
+        // Preload de imágenes críticas (mejora de rendimiento)
+        window.addEventListener('load', function() {
+            // Aquí podrías precargar imágenes importantes si las tuvieras
+            console.log('Página completamente cargada');
+        });
     </script>
 </body>
 </html>
